@@ -14,28 +14,21 @@
 
 
 .container {
-    margin: 0px 0px;
-   display: flex;
+    display: flex;
     flex:1;
     flex-direction: column;
     justify-content:center;
     align-items: center;
     background-color:lightgreen;
-    
-    /*width:min-content;*/
 }
 
 .sketch{
     display: flex;
-    flex-wrap: wrap;    /*
-    flex-direction: column;
-    justify-content:center;
-    align-items: center;
-    */
+    flex-wrap: wrap; 
     width: 800px;
     height : 800px;
 }
-/**/
+
 .rowContainer {
     display: flex;
     flex-direction: row;
@@ -57,4 +50,4 @@
 .highlight {
     background-color: yellow;
   }
- /* */
+ 

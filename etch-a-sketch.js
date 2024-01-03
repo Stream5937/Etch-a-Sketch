@@ -24,6 +24,7 @@ function highlight(cell) {
 
 
 function gridSetUp(){
+  resetSketch();
   let numStr= prompt("Input number of grids/side? -max 100 ");
   let num = parseInt(numStr);
   if(num > 100){
@@ -50,3 +51,11 @@ function gridSetUp(){
         }
     }
 }
+
+function resetSketch(){
+  const element= document.querySelector('.sketch');
+  while(element.firstChild){
+    element.removeChild(element.lastChild);
+  }
+}
+  

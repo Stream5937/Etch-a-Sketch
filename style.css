@@ -34,13 +34,17 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color:lightyellow;
+    background-color:pink;
+    border-style : solid;
+    border-color : blue;
+    border-width : 1px;
+    min-width: fit-content;
+    min-height: fit-content;
 }
 
 .gridDiv {
     display:flex;
-    width: 50px;
-    height: 50px;
+    flex-direction: column;
     background-color: cyan;
     border-style: solid;
     border-width: 1px;

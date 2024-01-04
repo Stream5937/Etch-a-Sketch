@@ -79,4 +79,18 @@
     margin : 0px 10px;
     padding :10px;
 }
+
+.btnContainer {
+    display:flex;
+    flex-direction : row;
+    justify-content: space-between;
+    color: lightgreen;
+    background-color: rgb(31, 50, 31);
+}
+
+.btnNote {
+    display: flex;
+    justify-self: flex-start;
+    margin: 15px;
+}
  

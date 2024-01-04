@@ -2,6 +2,7 @@
 const sketch = document.querySelector('.sketch');
 let rowContainer;
 let selectedCell;
+let enableHighlight = false;
 
 
 let heading = document.querySelector('.heading');
@@ -12,15 +13,20 @@ let heading = document.querySelector('.heading');
 //element.scrollIntoView({ block: "end" });
 heading.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
 
-
+sketch.onmousedown = () =>{
+  enableHighlight = enableHighlight ? false : true;
+}
 
 sketch.onmouseover = (event) => {
   let e = event.target.closest('div'); // (1)
   if (!e) return;
   if (e.tagName != 'DIV') return;
-  highlight(e);
+  if(enableHighlight){
+    highlight(e);  
+  }
 };
 
+sketch.on
 function highlight(cell) {
   /*
   if (selectedCell) { // remove the existing highlight if any

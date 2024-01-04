@@ -62,6 +62,10 @@
     background-color: yellow;
 }
 
+.noHighlight{
+    background-color: cyan;
+}
+
 .header,
 .footer {
     display: flex;
@@ -71,12 +75,16 @@
     background-color: rgb(31, 50, 31);
 }
 
+.footer {
+    padding: 10px 0px 10px 0px;
+}
+
 .heading {
     display: flex;
     justify-content : center;
     color: lightgreen;
     font-weight: 700;
-    margin : 0px 10px;
+    margin : 0px 30px 0px 0px;
     padding :10px;
 }
 
@@ -93,4 +101,20 @@
     justify-self: flex-start;
     margin: 15px;
 }
+
+.randNote {
+    display: flex;
+    justify-self: flex-end;
+    margin: 15px;
+}
  
+
+.flex-control-rand{
+  display: flex;
+  justify-content:flex-end ;
+}
+
+.flex-control-rand input {
+  order: 2;
+  margin : 0 5px;
+}

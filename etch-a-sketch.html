@@ -9,11 +9,17 @@
 </head>
 <body>
     <div class="header">
-        <h2 class="heading">ETCH-A-SKETCH</h2>
+        <h2 class="heading">E T C H --A-- S K E T C H</h2>
         <div class="btnContainer">
             <div class="btnNote">Set: (or reset) number of grid pixel squares per side</div>
             <button class="setGridSize" onclick="gridSetUp()" >Set Grid Size</button>
             <div class="btnNote">In grid: Button down alternates pixel highlight ON / OFF</div>
+            <div class="randNote">
+                <span class="flex-control-rand">
+                <input type="checkbox" id="random" name="random">
+                <label id="randLabel" for="random">Randomise</label>
+                </span>
+            </div>
         </div>
     </div>
     <div class="container" id="grid">

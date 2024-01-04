@@ -3,6 +3,8 @@ const sketch = document.querySelector('.sketch');
 let rowContainer;
 let selectedCell;
 let enableHighlight = false;
+//let randCheck = document.querySelector("input[type=checkbox]");
+let randCheck = document.getElementById("random");
 
 
 let heading = document.querySelector('.heading');
@@ -19,6 +21,7 @@ sketch.onmousedown = () =>{
 
 sketch.onmouseover = (event) => {
   let e = event.target.closest('div'); // (1)
+  
   if (!e) return;
   if (e.tagName != 'DIV') return;
   if(enableHighlight){
@@ -28,13 +31,24 @@ sketch.onmouseover = (event) => {
 
 sketch.on
 function highlight(cell) {
+
+  selectedCell = cell;
+  
   /*
   if (selectedCell) { // remove the existing highlight if any
     selectedCell.classList.remove('highlight');
   }
   */
-  selectedCell = cell;
-  selectedCell.classList.add('highlight'); // highlight the new cell  
+  if(randCheck.checked){
+    selectedCell.classList.add('nohighlight'); // remove highlight from the new cell
+    //console.log(selectedCell.style.backgroundColor);
+    //selectedCell.style.backgroundColor="blue";    //works
+    //console.log(selectedCell.style.backgroundColor);
+    selectedCell.style.backgroundColor= getRndColString();
+  }
+  else{
+    selectedCell.classList.add('highlight'); // highlight the new cell
+  }  
 }
 
 
@@ -74,4 +88,11 @@ function resetSketch(){
     element.removeChild(element.lastChild);
   }
 }
+
+function getRndColString() {
+  let colStr = "#"+ (Math.random()	* 0xFFFFFF<<0).toString(16);
+  //console.log("colStr = "+ colStr);
+  return colStr;
+}
+
   

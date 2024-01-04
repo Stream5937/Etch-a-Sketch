@@ -12,6 +12,13 @@
     align-items: center;
 }
 
+.setGridSize {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    padding: 5px;
+    background-color: lightgreen;
+}
 
 .container {
     display: flex;
@@ -53,5 +60,23 @@
 
 .highlight {
     background-color: yellow;
-  }
+}
+
+.header,
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: lightgreen;
+    background-color: rgb(31, 50, 31);
+}
+
+.heading {
+    display: flex;
+    justify-content : center;
+    color: lightgreen;
+    font-weight: 700;
+    margin : 0px 10px;
+    padding :10px;
+}
  

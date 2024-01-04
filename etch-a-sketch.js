@@ -4,6 +4,16 @@ let rowContainer;
 let selectedCell;
 
 
+let heading = document.querySelector('.heading');
+
+
+//element.scrollIntoView();
+//element.scrollIntoView(false);
+//element.scrollIntoView({ block: "end" });
+heading.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+
+
+
 sketch.onmouseover = (event) => {
   let e = event.target.closest('div'); // (1)
   if (!e) return;

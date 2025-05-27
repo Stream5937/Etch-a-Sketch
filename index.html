@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="etch-a-sketch.js" defer></script>
+    <title>Etch-a-Sketch</title>
+</head>
+<body>
+    <div class="header">
+        <h2 class="heading">E T C H --A-- S K E T C H</h2>
+        <div class="btnContainer">
+            <div class="btnNote">Set: (or reset) number of grid pixel squares per side</div>
+            <button class="setGridSize" onclick="gridSetUp()" >Set Grid Size</button>
+            <div class="btnNote">In grid: Button down alternates pixel highlight ON / OFF</div>
+
+            <div class="randNote">
+                <span class="flex-control-rand">
+                <input type="checkbox" id="random" name="random">
+                <label id="randLabel" for="random">Randomise</label>
+                </span>
+                <span class="flex-control-dark">
+                <input type="checkbox" id="darken" name="darken">
+                <label id="darkLabel" for="darken">Darken</label>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="grid">
+        <div class="sketch">
+
+        </div>
+    </div>
+    <div class="footer">
+    <p>An exercise</p>
+    </div>
+    
+</body>
+</html>

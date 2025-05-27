@@ -3,8 +3,11 @@ const sketch = document.querySelector('.sketch');
 let rowContainer;
 let selectedCell;
 let enableHighlight = false;
-//let randCheck = document.querySelector("input[type=checkbox]");
 let randCheck = document.getElementById("random");
+let darkCheck = document.getElementById("darken");
+console.log("DarkChecked-1 = "+ darkCheck.checked);
+let darker = false;
+let existCol;
 
 
 let heading = document.querySelector('.heading');
@@ -20,25 +23,37 @@ sketch.onmousedown = () =>{
 }
 
 sketch.onmouseover = (event) => {
-  let e = event.target.closest('div'); // (1)
-  
+
+  let e = event.target.closest('div');
+  //console.log('e:',e, 'e tag: ',e.tagName);
   if (!e) return;
   if (e.tagName != 'DIV') return;
+  console.log("DarkChecked-2 = "+ darkCheck.checked);
+  if(darkCheck.checked){ 
+    darker =true;
+    //existCol = e.style.backgroundColor.value;
+    existCol = e.style.getAttribute('background-color');
+    console.log("existing colour ="+existCol);
+    darkenColor(existCol);
+    //return;
+  }
+
   if(enableHighlight){
-    highlight(e);  
+    highlight(e); 
   }
 };
 
-sketch.on
+//sketch.on
 function highlight(cell) {
 
   selectedCell = cell;
-  
+  console.log('selected e:',selectedCell, 'e tag: ', selectedCell.tagName);
   /*
   if (selectedCell) { // remove the existing highlight if any
     selectedCell.classList.remove('highlight');
   }
   */
+
   if(randCheck.checked){
     selectedCell.classList.add('nohighlight'); // remove highlight from the new cell
     //console.log(selectedCell.style.backgroundColor);
@@ -49,6 +64,7 @@ function highlight(cell) {
   else{
     selectedCell.classList.add('highlight'); // highlight the new cell
   }  
+
 }
 
 
@@ -95,4 +111,10 @@ function getRndColString() {
   return colStr;
 }
 
+
+function darkenColor(existCol) {
+
+  console.log("at function  existing color = " + existCol);
+
+}
   

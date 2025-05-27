@@ -104,17 +104,20 @@
 
 .randNote {
     display: flex;
-    justify-self: flex-end;
-    margin: 15px;
+    flex-direction: column;
+    align-self: flex-end;
+    align-items: flex-end;
+    margin: 5px 0px 5px 20px;
 }
  
-
-.flex-control-rand{
+.flex-control-dark,
+.flex-control-rand {
   display: flex;
   justify-content:flex-end ;
 }
 
+.flex-control-dark input,
 .flex-control-rand input {
   order: 2;
-  margin : 0 5px;
+  margin : 0px 5px;
 }
